@@ -1,0 +1,37 @@
+{% extends 'personal/header.html' %}
+
+{% block content %}
+
+<!--    <div class="col-xs-3">
+      <form class="form-signin">
+        <h3 class="form-signin-heading">Please sign in</h3>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+              <div class="container-fluid" style='....'><a href="#" target="blank"> Sign Up</a></div>
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+    </div>-->
+
+
+
+<h1>User Login</h1>
+{% if form.has_errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+<form method="post" action=".">
+<p><label for="id_username">Username:</label>
+{{ form.username }}</p>
+<p><label for="id_password">Password:</label>
+{{ form.password }}</p>
+<input type="hidden" name="next" value="/" />
+<input type="submit" value="login" />
+{% csrf_token %}
+</form>
+{% endblock %}
