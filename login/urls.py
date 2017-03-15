@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from django.views.generic import (ListView, DetailView)
-from login.models import Users
+#from .login.models import Users
 from . import views
 
 
@@ -13,5 +13,6 @@ urlpatterns = [
 ]"""
 
 urlpatterns = [
-    url(r'^$', views.loginform, name='login')
+    url(r'^$', views.index, name='login'),
+    url(r'^register/$', views.UserFormView.as_view(), name='register'),
 ]
