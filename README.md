@@ -6,10 +6,10 @@ This is a collectd python plugin to collect libvirt stats
 
 
 1. Install the dependencies
-===========================
+\n===========================
 Run
-	#yum groupinstall 'Development Tools'
-	#curl https://bootstrap.pypa.io/get-pip.py | python -
+	\n#yum groupinstall 'Development Tools'
+	\n#curl https://bootstrap.pypa.io/get-pip.py | python -
 	#pip install setuptools
 	#pip install libvirt-python==2.0.0
 	#pip install collectd
